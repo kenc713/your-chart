@@ -15,13 +15,6 @@ RUN npm ci
 # ソースコードをコピー
 COPY . .
 
-# セキュリティ: 非root ユーザーを作成して切り替え
-RUN addgroup -g 1001 appuser && \
-    adduser -D -u 1001 -G appuser appuser && \
-    chown -R appuser:appuser /app
-
-USER appuser
-
 # Vite 開発サーバーのポート公開
 EXPOSE 5173
 
