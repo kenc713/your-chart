@@ -12,6 +12,9 @@ COPY package*.json ./
 # 依存関係をインストール
 RUN npm ci
 
+# openspec をインストール
+RUN npm install -g @fission-ai/openspec@latest
+
 # ソースコードをコピー
 COPY . .
 
