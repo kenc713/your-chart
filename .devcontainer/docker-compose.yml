@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  # 開発環境
+  dev:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+      target: development
+    ports:
+      - "5173:5173"
+    volumes:
+      - ..:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    container_name: your-chart-dev
+    stdin_open: true
+    tty: true
