@@ -3,9 +3,6 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "dev",
   "workspaceFolder": "/app",
-  "features": {
-    "ghcr.io/devcontainers/features/git:1": {}
-  },
   "customizations": {
     "vscode": {
       "extensions": [
